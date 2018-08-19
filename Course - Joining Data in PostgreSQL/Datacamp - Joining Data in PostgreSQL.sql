@@ -298,6 +298,7 @@ WHERE c.name LIKE 'Hyder%';
 SELECT co.name AS country, region, p.life_expectancy AS life_exp
 FROM countries AS co
 LEFT JOIN populations AS p
+ON co.code = p.country_code
 WHERE p.year = 2010
 ORDER BY p.life_expectancy
 LIMIT 5;
